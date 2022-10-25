@@ -14,6 +14,7 @@ Demo:
 
 https://replit.com/@codexserenity/Pathfinding-Visualization#Main.java
 
+(Click the 'Run' button to start the program and the two expanding arrows next to the 'Run' button to enter fullscreen mode. If the terminal doesn't appear after you've clicked the 'Run' button, you might have to wait a few seconds for the page to load all the necessary files before it appears.)
 
 
 ## Functionality
