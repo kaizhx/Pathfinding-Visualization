@@ -25,11 +25,11 @@ public class Visualizer {
 
   private static Scanner scanner = new Scanner(System.in);
 
-  public void clearScreen() {
+  private void clearScreen() {
     System.out.println(new String(new char[100]).replace("\0", "\r\n"));
   }
 
-  public void generateTiles() {
+  private void generateTiles() {
 
     tileMatrix = new Tile[amountOfRows][amountOfColumns];
     for (int i = 0; i < amountOfRows; i++) {
@@ -65,7 +65,7 @@ public class Visualizer {
     }
   }
 
-  public void buildGridString() {
+  private void buildGridString() {
 
     String[][] visualizedMatrix = new String[amountOfRows * 2 + 1][amountOfColumns * 2 + 1];
     for (int i = 1; i < amountOfRows * 2 + 1; i += 2) {
@@ -122,7 +122,7 @@ public class Visualizer {
     gridString = stringBuilder.toString();
   }
 
-  public void setAlgorithm() {
+  private void setAlgorithm() {
     clearScreen();
     String instruction = "Please select the algorithm that you want to use:\n\n1 : Dijkstra's algorithm\n\n2 : A* algorithm\n\n";
     while (true) {
@@ -149,7 +149,7 @@ public class Visualizer {
     }
   }
 
-  public Tile returnTileWithLowestFScore(ArrayList<Tile> openSet, Tile destination) {
+  private Tile returnTileWithLowestFScore(ArrayList<Tile> openSet, Tile destination) {
     int lowestCost = Integer.MAX_VALUE;
     Tile tileWithLowestCost = null;
     for (int i = 0; i < openSet.size(); i++) {
@@ -161,7 +161,7 @@ public class Visualizer {
     return tileWithLowestCost;
   }
 
-  public Tile returnTileWithLowestGScore(ArrayList<Tile> openSet, Tile destination) {
+  private Tile returnTileWithLowestGScore(ArrayList<Tile> openSet, Tile destination) {
     int lowestCost = Integer.MAX_VALUE;
     Tile tileWithLowestCost = null;
     for (int i = 0; i < openSet.size(); i++) {
@@ -173,7 +173,7 @@ public class Visualizer {
     return tileWithLowestCost;
   }
 
-  public void useDijkstra(Tile source, Tile destination) {
+  private void useDijkstra(Tile source, Tile destination) {
      source.setValue("S");
     destination.setValue("D");
     ArrayList<Tile> openSet = new ArrayList<Tile>();
@@ -295,7 +295,7 @@ public class Visualizer {
     destination.setValue("D");
   }
 
-  public void useAStar(Tile source, Tile destination) {
+  private void useAStar(Tile source, Tile destination) {
     source.setValue("S");
     destination.setValue("D");
     ArrayList<Tile> openSet = new ArrayList<Tile>();
@@ -417,11 +417,11 @@ public class Visualizer {
     destination.setValue("D");
   }
 
-  public int getManhattanDistance(Tile tile, Tile destination) {
+  private int getManhattanDistance(Tile tile, Tile destination) {
     return (Math.abs(tile.getRow() - destination.getRow()) + Math.abs(tile.getColumn() - destination.getColumn()));
   }
 
-  public Tile getUnvisitedNeighbour(Tile currentTile) {
+  private Tile getUnvisitedNeighbour(Tile currentTile) {
     int currentTileRow = currentTile.getRow();
     int currentTileColumn = currentTile.getColumn();
 
@@ -678,7 +678,7 @@ public class Visualizer {
     return currentTile;
   }
 
-  public void useDFS() {
+  private void useDFS() {
     int randomRow = (int) Math.floor(Math.random() * amountOfRows);
     int randomColumn = (int) Math.floor(Math.random() * amountOfColumns);
     Tile startTile = tileMatrix[randomRow][randomColumn];
@@ -742,7 +742,7 @@ public class Visualizer {
     }
   }
 
-  public void useRandomizedPrim() {
+  private void useRandomizedPrim() {
     ArrayList<Wall> listOfWalls = new ArrayList<Wall>();
     int randomRow = (int) Math.floor(Math.random() * amountOfRows);
     int randomColumn = (int) Math.floor(Math.random() * amountOfColumns);
@@ -889,7 +889,7 @@ public class Visualizer {
     }
   }
 
-  public void createRandomMaze() {
+  private void createRandomMaze() {
     String mazeInstruction = "\n\nChoose a maze generation algorithm:\n\n1 : Depth First Search\n\n2 : Randomized Prim\n\n";
     while (true) {
       try {
@@ -920,7 +920,7 @@ public class Visualizer {
     }
   }
 
-  public void initialize() {
+  private void initialize() {
     String rowInstruction = "\n\nSet the amount of rows for the grid (Min: " + MIN_ROWS + ", Max: " + MAX_ROWS
         + "):\n\n";
     String columnInstruction = "\n\nSet the amount of columns for the grid (Min: " + MIN_COLUMNS + ", Max: "
@@ -978,7 +978,7 @@ public class Visualizer {
     }
   }
 
-  public void setPoint(String pointType) {
+  private void setPoint(String pointType) {
     clearScreen();
     String rowInstruction = "Set the row of your " + pointType + " point:\n\n";
     String columnInstruction = "Set the column of your " + pointType + " point:\n\n";
@@ -1081,7 +1081,7 @@ public class Visualizer {
     buildGridString();
   }
 
-  public void switchToMainMenu() {
+  private void switchToMainMenu() {
     String menuIntro = "Welcome to the main menu!\n\nFrom here you can create a random maze, set source/destination points and select a pathfinding algorithm of your choice.\n\n";
     String note = "Note: A grid must be initialized first before other options are available.\n\n";
     String options1 = "1 : Initialize a grid\n\n2 : Create random maze\n\n3 : Set new source point\n\n4 : Set new destination point\n\n5 : Choose pathfinding algorithm\n\n6 : Start pathfinding\n\n7 : Turn off animations\n\n8 : Exit program\n\n";
