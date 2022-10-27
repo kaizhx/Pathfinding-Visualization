@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Visualizer {
   private int amountOfRows = 0;
