@@ -8,7 +8,7 @@ The program was build to visualize some of the most well known pathfinding algor
 
 ** EPILEPSY WARNING ** 
 
-In the main menu you will have the option to turn on animations for maze generation and pathfinding. The program is a lot more expressive with animations turned on, but because of how the program simulates animations using the terminal, it may cause some flashing/flickering which may affect certain people.
+In the main menu you will have the option to turn on animations for maze generation and pathfinding. The program is a lot more interactive with animations turned on, but the way it simulates the animations in the terminal may cause some flashing/flickering which may affect certain people.
 
 Demo:
 
