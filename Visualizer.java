@@ -26,7 +26,7 @@ public class Visualizer {
   private static Scanner scanner = new Scanner(System.in);
 
   public void clearScreen() {
-    System.out.println(new String(new char[60]).replace("\0", "\r\n"));
+    System.out.println(new String(new char[100]).replace("\0", "\r\n"));
   }
 
   public void generateTiles() {
