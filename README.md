@@ -10,12 +10,6 @@ The program was build to visualize some of the most well known pathfinding algor
 
 In the main menu you will have the option to turn on animations for maze generation and pathfinding. The program is a lot more interactive with animations turned on, but the way it simulates the animations in the terminal may cause some flashing/flickering which may affect certain people.
 
-Demo:
-
-https://replit.com/@codexserenity/Pathfinding-Visualization#Main.java
-
-(Click the 'Run' button to start the program and the two expanding arrows next to the 'Run' button to enter fullscreen mode. If the terminal doesn't appear after you've clicked the 'Run' button, you might have to wait a few seconds for the page to load all the necessary files before it appears.)
-
 
 ## Functionality
 
